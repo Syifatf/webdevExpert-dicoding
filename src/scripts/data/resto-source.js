@@ -4,14 +4,9 @@ class RestoSource {
   static async homeResto() {
     const response = await fetch(API_ENDPOINT.HOME_RESTO);
     const responseJson = await response.json();
-    return responseJson.results;
+    console.log({ responseJson });
+    return responseJson.restaurants;
   }
- 
-//   static async upcomingMovies() {
-//     const response = await fetch(API_ENDPOINT.UPCOMING);
-//     const responseJson = await response.json();
-//     return responseJson.results;
-//   }
  
   static async detailResto(id) {
     const response = await fetch(API_ENDPOINT.DETAIL(id));
@@ -26,7 +21,7 @@ class RestoSource {
   static async search() {
     const response = await fetch(API_ENDPOINT.SEARCH);
     const responseJson = await response.json();
-    return responseJson.results;
+    return responseJson.restaurants;
   }
 }
  

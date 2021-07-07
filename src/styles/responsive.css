@@ -9,6 +9,8 @@
         background-color: #fff;
         width: 300px;
         position: absolute;
+        display: inline-block;
+
  
         /* This trasform moves the drawer off canvas. */
         -webkit-transform: translate(-300px, 0);
@@ -25,15 +27,20 @@
  
     .nav__item {
         display: list-item;
+        position: relative;
         border-bottom: 1px solid #E0E0E0;
         width: 100%;
         text-align: left;
+        display: inline-block;
+
     }
  }
  
  @media screen and (min-width: 500px) {
     .header__menu {
         display: none;
+        grid-template-columns: 1fr 1fr;
+
     }
  }
  
@@ -49,12 +56,22 @@
     .post-item__description {
         font-size: 14px;
     }
+
+
+    .restos {
+        grid-template-columns: 1fr 1fr;
+
+    }
+
+    .restoo {
+        grid-template-columns: auto 1fr;
+    }
  }
 
  @media screen and (min-width: 700px) {
     .posts {
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
         grid-column-gap: 15px;
         grid-row-gap: 16px;
     }
@@ -64,6 +81,10 @@
     .nav__list {
         max-width: 800px;
         margin: 0 auto;
+    }
+
+    .restos {
+        grid-template-columns: repeat(3, 1fr);
     }
  }
  
@@ -78,5 +99,15 @@
     main {
         max-width: 1200px;
     }
+
+    .restos {
+        grid-template-columns: repeat(4, 1fr);
+    }
  }
+
+ @media screen and (min-width: 1600px) {
+    .restos {
+        grid-template-columns: repeat(5, 1fr);
+    }
+}
  

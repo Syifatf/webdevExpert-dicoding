@@ -4,19 +4,21 @@
     box-sizing: border-box;
 }
 
-body, html {
+html {
     margin: 0;
-    padding: 0;
     width: 100%;
     height: 100%;
 }
 
 body {
+    margin: 0;
+    padding: 40px;
+    width: 100%;
+    height: 100%;
     font-family: 'Righteous', cursive;
     font-size: 12px;
     color: #424242;
-    padding: 20px;
-    background-image: url(https://i2.wp.com/guitarandlace.com/wp-content/uploads/2021/01/7.png?ssl=1);
+    /* background-image: url(https://i2.wp.com/guitarandlace.com/wp-content/uploads/2021/01/7.png?ssl=1); */
 } 
 
 /*
@@ -187,6 +189,11 @@ main {
 
 .content {
     padding: 32px;
+    min-height: 100%;
+}
+
+.content .content__heading {
+    font-weight: normal;
 }
 
 /*
@@ -408,7 +415,7 @@ footer {
   Movies
 */
 
-.movies {
+.restoo {
     display: grid;
     grid-template-columns: 1fr;
     gap: 16px;
@@ -416,64 +423,25 @@ footer {
 }
 
 /*
-  Movie Item
+  resto Item
 */
 
-.movie-item {
+.restaurant-item {
     width: 100%;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     border-radius: 8px;
     overflow: hidden;
 }
 
-.movie-item__header {
+.restaurant-item__header {
     position: relative;
 }
 
-.movie-item .movie-item__header .movie-item__header__poster {
-    width: 100%;
-}
-
-.movie-item .movie-item__header .movie-item__header__rating {
-    position: absolute;
-    padding: 8px;
-    bottom: 20px;
-    left: 0;
-    display: inline-block;
-    background-color: black;
-    color: white;
-}
-
-.movie-item .movie-item__header .movie-item__header__rating .movie-item__header__rating__score {
-    margin-left: 10px;
-}
-
-.movie-item .movie-item__content {
-    padding: 16px;
-}
-
-.movie-item .movie-item__content h3 {
-    margin: 0 0 10px 0;
-}
-
-.movie-item .movie-item__content h3 a {
-    color: #db0000;
-    text-decoration: none;
-}
-
-.movie-item .movie-item__content p {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: -webkit-box;
-    -webkit-line-clamp: 4; /* number of lines to show */
-    -webkit-box-orient: vertical;
-}
-
 /*
-  Movie
+  restokey
 */
 
-.movie {
+.restaurant {
     margin: 0 auto;
     width: 100%;
     max-width: 800px;
@@ -482,20 +450,37 @@ footer {
     gap: 18px 16px;
 }
 
-.movie .movie__poster {
+.restaurant .restaurant__poster {
     width: 100%;
     max-width: 400px;
 }
 
-.movie .movie__info h4 {
+.restaurant .restaurant__info h4 {
     margin: 8px 0;
 }
 
-.contentHome {
+/* .contentHome {
     margin: 0 auto;
     min-height: 100%;
-}
+} */
 
 .content .content__headingHome {
     font-weight: normal;
+}
+
+/* .post-item .post-item__content h3 {
+    margin: 0 0 10px 0;
+}
+
+.post-item .post-item__content h3 a {
+    color: #db0000;
+    text-decoration: none;
+} */
+
+.post-item .post-item__content p {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 4; /* number of lines to show */
+    -webkit-box-orient: vertical;
 }
