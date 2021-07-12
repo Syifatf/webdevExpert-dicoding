@@ -4,11 +4,12 @@ import { createRestaurantItemTemplate } from "../templates/template-creator";
 const HomePage = {
   async render() {
     return `
+
     <div class="content">
       <div class="latest">
         <h1 class="latest__label">&#x2728; Daftar Restorant &#x2728;</h1>
       </div>
-      <h1 class="content__heading">All Resto</h1>
+      <h2 class="content__heading">All Resto: (20)</h2>
       <div id="restos" class="restos">
  
       </div>
