@@ -1,5 +1,5 @@
 import RestoSource from '../../data/resto-source';
-import { createRestaurantItemTemplate } from "../templates/template-creator";
+import { createRestaurantItemTemplate } from '../templates/template-creator';
 
 const HomePage = {
   async render() {

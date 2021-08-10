@@ -9,7 +9,7 @@ import CONFIG from './globals/config';
 const app = new App({
   button: document.querySelector('#menu'),
   drawer: document.querySelector('#drawer'),
-  content: document.querySelector('#mainContent')
+  content: document.querySelector('#mainContent'),
 });
 
 window.addEventListener('hashchange', () => {
@@ -20,5 +20,4 @@ window.addEventListener('load', () => {
   app.renderPage();
   swRegister();
   WebSocketInitiator.init(CONFIG.WEB_SOCKET_SERVER);
-
 });

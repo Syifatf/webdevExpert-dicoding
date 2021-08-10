@@ -19,7 +19,7 @@ const Like = {
     const restosContainer = document.querySelector('#restos');
     restos.forEach((restoo) => {
       restosContainer.innerHTML += createRestaurantItemTemplate(restoo);
-      console.log({restos})
+      console.log({ restos });
     });
   },
 };

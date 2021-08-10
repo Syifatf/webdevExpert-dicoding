@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 import CONFIG from '../../globals/config';
 
 const createFDrinkList = (fdrink) => `${fdrink.name}, `;
@@ -29,11 +30,13 @@ const createRestaurantDetailTemplate = (restaurant) => `
   <h4 class="rev">Customer Reviews</h4>
 
   <div class="card">
-  <div class="container">
+  <div class="container rght">
   <p>${restaurant.customerReviews.map((fdrink) => `
     <b>name: </b> ${fdrink.name}
-  <li style="list-style-image: url(https://assets.ubuntu.com/sites/ubuntu/latest/u/img/favicon.ico)">> <b>review: </b> ${fdrink.review}</li><hr>
-`)}
+    <ul>
+      <li style="list-style-image: url(https://assets.ubuntu.com/sites/ubuntu/latest/u/img/favicon.ico)">> <b>review: </b> ${fdrink.review}</li><hr>
+    </ul>
+  `)}
   </></p> 
   </div>
 </div>
@@ -61,16 +64,22 @@ const createRestaurantItemTemplate = (restaurant) => `
 </div>
   `;
 
-const createLikeButtonTemplate = () => `
+const createLikeRestoButtonTemplate = () => `
   <button aria-label="like this restoo" id="likeButton" class="like">
      <i class="fa fa-heart-o" aria-hidden="true"></i>
   </button>
 `;
- 
-const createLikedButtonTemplate = () => `
+
+const createUnlikeRestoButtonTemplate = () => `
   <button aria-label="unlike this restoo" id="likeButton" class="like">
     <i class="fa fa-heart" aria-hidden="true"></i>
   </button>
 `;
 
-export { createRestaurantItemTemplate, createRestaurantDetailTemplate, createLikeButtonTemplate, createLikedButtonTemplate, createFDrinkList };
+export {
+  createRestaurantItemTemplate,
+  createRestaurantDetailTemplate,
+  createLikeRestoButtonTemplate,
+  createUnlikeRestoButtonTemplate,
+  createFDrinkList,
+};
