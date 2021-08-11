@@ -9,4 +9,4 @@ const createLikeButtonPresenterWithResto = async (restoo) => {
   });
 };
 
-export { createLikeButtonPresenterWithResto };s
+export { createLikeButtonPresenterWithResto };
