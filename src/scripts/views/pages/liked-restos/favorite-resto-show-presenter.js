@@ -1,19 +1,19 @@
-class FavoriteRestoShowPresenter {
-  constructor({ view, favoriteRestos }) {
-    this._view = view;
-    this._favoriteRestos = favoriteRestos;
+// class FavoriteRestoShowPresenter {
+//   constructor({ view, favoriteRestos }) {
+//     this._view = view;
+//     this._favoriteRestos = favoriteRestos;
 
-    this._showFavoriteRestos();
-  }
+//     this._showFavoriteRestos();
+//   }
 
-  async _showFavoriteRestos() {
-    const restos = await this._favoriteRestos.getAllRestos();
-    this._displayRestos(restos);
-  }
+//   async _showFavoriteRestos() {
+//     const restos = await this._favoriteRestos.getAllRestos();
+//     this._displayRestos(restos);
+//   }
 
-  _displayRestos(restos) {
-    this._view.showFavoriteRestos(restos);
-  }
-}
+//   _displayRestos(restos) {
+//     this._view.showFavoriteRestos(restos);
+//   }
+// }
 
-export default FavoriteRestoShowPresenter;
+// export default FavoriteRestoShowPresenter;

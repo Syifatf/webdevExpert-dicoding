@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 import FavoriteRestoIdb from '../../data/favoriteResto-idb';
 import FavoriteRestoShowPresenter from './liked-restos/favorite-resto-show-presenter';
 
@@ -10,9 +11,7 @@ const Like = {
   },
 
   async afterRender() {
-    // eslint-disable-next-line no-undef
     new FavoriteRestoShowPresenter({ view, favoriteRestos: FavoriteRestoIdb });
-    // eslint-disable-next-line no-undef
     console.log({ restos });
   },
 };

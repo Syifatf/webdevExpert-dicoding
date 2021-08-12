@@ -34,19 +34,6 @@ const FavoriteRestoArray = {
     // kecuali film dengan id == id
     favoriteRestos = favoriteRestos.filter((restoo) => restoo.id !== id);
   },
-
-  // searchRestos(query) {
-  //   return this.getAllRestos()
-  //     .filter((restoo) => {
-  //       const loweredCaseRestoTitle = (restoo.title || '-').toLowerCase();
-  //       const jammedRestoTitle = loweredCaseRestoTitle.replace(/\s/g, '');
-
-  //       const loweredCaseQuery = query.toLowerCase();
-  //       const jammedQuery = loweredCaseQuery.replace(/\s/g, '');
-
-  //       return jammedRestoTitle.indexOf(jammedQuery) !== -1;
-  //     });
-  // },
 };
 
 describe('Favorite Resto Array Contract Test Implementation', () => {
