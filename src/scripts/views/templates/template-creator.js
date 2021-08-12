@@ -5,7 +5,12 @@ const createRestaurantDetailTemplate = (restaurant) => `
 <div class="detail-a">
   <h4 class="resto__title" href="#" >&#128609; ${restaurant.name} &#128609;</h4> <br/>
 
-  <img class="resto__poster" src="${CONFIG.BASE_IMAGE_URL + restaurant.pictureId}" alt="${restaurant.name}" />
+  <picture>
+      <source media="(max-width: 600px)">
+      <img loading="lazy" class="lazyload resto__poster" 
+            src="${CONFIG.BASE_IMAGE_URL + restaurant.pictureId}" 
+            alt="${restaurant.name}" />
+  </picture>
   <div class="resto__info">
   <h3>Information Resto</h3> 
   <h4>Rating: ⭐️⭐️⭐️⭐️⭐️ ${restaurant.rating}</h4>
@@ -47,8 +52,13 @@ const createRestaurantDetailTemplate = (restaurant) => `
 
 const createRestaurantItemTemplate = (restaurant) => `
 <article class="post-item">
-  <img class="post-item__thumbnail" src="${CONFIG.BASE_IMAGE_URL + restaurant.pictureId}">
-  
+<picture>
+  <source media="(max-width: 600px)">
+  <img loading="lazy" class="lazyload post-item__thumbnail" 
+        src="${CONFIG.BASE_IMAGE_URL + restaurant.pictureId}"
+        alt=" "/>
+
+</picture>  
   <div class="post-item__content">
   <div class="resto-item__header__rating">
   <p>⭐️⭐️⭐️⭐️⭐️  <span class="restaurant-item__header__rating__score">${restaurant.rating || '-'}</span></p>

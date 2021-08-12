@@ -20,7 +20,7 @@ const Detail = {
     console.log({ restoo });
 
     LikeButtonPresenter.init({
-      LikeButtonPresenter: document.querySelector('#likeButtonContainer'),
+      likeButtonContainer: document.querySelector('#likeButtonContainer'),
       favoriteRestos: FavoriteRestoIdb,
       restoo: {
         id: restoo.restaurant.id,

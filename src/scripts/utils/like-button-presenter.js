@@ -9,6 +9,7 @@ const LikeButtonPresenter = {
     this._restoo = restoo;
     this._favoriteRestos = favoriteRestos;
 
+    console.log({ likeButtonContainer });
     await this._renderButton();
   },
 

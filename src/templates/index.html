@@ -27,7 +27,13 @@
 
     <header class="header">
         <div class="header__inner">
-            <img class="idmg" src="../../images/heros/garphon.png" alt="">
+            <picture>
+                <source media="(max-width: 600px)" >
+                <img loading="lazy" class="lazyload idmg" 
+                        src="../../images/heros/garphon.png" 
+                        alt="" />
+            </picture>
+
             <div id="home" class="half-circle">
                 <h3 class="header__title">
                     InsRest
