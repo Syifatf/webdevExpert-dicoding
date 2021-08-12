@@ -38,10 +38,10 @@ describe('Unliking A Restoo', () => {
   it('should not throw error if the unliked Resto is not in the list', async () => {
     await TestFactories.createLikeButtonPresenterWithResto({ id: 1 });
 
-    // hapus dulu film dari daftar film yang disukai
+    // hapus dulu restaurant dari daftar restaurant yang disukai
     await FavoriteRestoIdb.deleteRestoo(1);
 
-    // kemudian, simulasikan pengguna menekan widget batal menyukai film
+    // kemudian, simulasikan pengguna menekan widget batal menyukai restaurant
     document.querySelector('[aria-label="unlike this Restoo"]').dispatchEvent(new Event('click'));
 
     expect(await FavoriteRestoIdb.getAllRestos()).toEqual([]);

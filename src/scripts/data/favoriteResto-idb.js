@@ -14,7 +14,7 @@ const FavoriteRestoIdb = {
     if (!id) {
       return;
     }
-      return (await dbPromise).get(OBJECT_STORE_NAME, id);
+    return (await dbPromise).get(OBJECT_STORE_NAME, id);
   },
   async getAllRestos() {
     return (await dbPromise).getAll(OBJECT_STORE_NAME);

@@ -1,3 +1,4 @@
+// eslint-disable-next-line import/named
 import { createRestoItemTemplate } from '../../templates/template-creator';
 
 class FavoriteRestoSearchView {
