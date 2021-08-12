@@ -1,18 +1,18 @@
 import FavoriteRestoIdb from '../../data/favoriteResto-idb';
-import FavoriteRestoSearchView from './liked-restos/favorite-resto-search-view';
 import FavoriteRestoShowPresenter from './liked-restos/favorite-resto-show-presenter';
-import FavoriteRestoSearchPresenter from './liked-restos/favorite-resto-search-presenter';
 
-const view = new FavoriteRestoSearchView();
+// const view = new FavoriteRestoSearchView();
 
 const Like = {
   async render() {
+    // eslint-disable-next-line no-undef
     return view.getTemplate();
   },
 
   async afterRender() {
+    // eslint-disable-next-line no-undef
     new FavoriteRestoShowPresenter({ view, favoriteRestos: FavoriteRestoIdb });
-    new FavoriteRestoSearchPresenter({ view, favoriteRestos: FavoriteRestoIdb });
+    // eslint-disable-next-line no-undef
     console.log({ restos });
   },
 };

@@ -1,5 +1,5 @@
-import FavoriteRestoSearchView
-  from '../src/scripts/views/pages/liked-restos/favorite-resto-search-view';
+// import FavoriteRestoSearchView
+//   from '../src/scripts/views/pages/liked-restos/favorite-resto-search-view';
 import FavoriteRestoShowPresenter
   from '../src/scripts/views/pages/liked-restos/favorite-resto-show-presenter';
 import FavoriteRestoIdb from '../src/scripts/data/favoriteResto-idb';
@@ -8,7 +8,7 @@ describe('Showing all favorite restos', () => {
   let view;
 
   const renderTemplate = () => {
-    view = new FavoriteRestoSearchView();
+    // view = new FavoriteRestoSearchView();
     document.body.innerHTML = view.getTemplate();
   };
 

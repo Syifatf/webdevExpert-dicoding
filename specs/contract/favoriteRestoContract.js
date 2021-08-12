@@ -58,18 +58,18 @@ const itActsAsFavoriteRestoModel = (favoriteResto) => {
       ]);
   });
 
-  it('should be able to search for restos', async () => {
-    favoriteResto.putRestoo({ id: 1, title: 'restaurant a' });
-    favoriteResto.putRestoo({ id: 2, title: 'restaurant b' });
-    favoriteResto.putRestoo({ id: 3, title: 'restaurant abc' });
-    favoriteResto.putRestoo({ id: 4, title: 'ini mah restaurant abcd' });
+  // it('should be able to search for restos', async () => {
+  //   favoriteResto.putRestoo({ id: 1, title: 'restaurant a' });
+  //   favoriteResto.putRestoo({ id: 2, title: 'restaurant b' });
+  //   favoriteResto.putRestoo({ id: 3, title: 'restaurant abc' });
+  //   favoriteResto.putRestoo({ id: 4, title: 'ini mah restaurant abcd' });
 
-    expect(await favoriteResto.searchRestos('restaurant a')).toEqual([
-      { id: 1, title: 'restaurant a' },
-      { id: 3, title: 'restaurant abc' },
-      { id: 4, title: 'ini mah restaurant abcd' },
-    ]);
-  });
+  //   expect(await favoriteResto.searchRestos('restaurant a')).toEqual([
+  //     { id: 1, title: 'restaurant a' },
+  //     { id: 3, title: 'restaurant abc' },
+  //     { id: 4, title: 'ini mah restaurant abcd' },
+  //   ]);
+  // });
 };
 
 export { itActsAsFavoriteRestoModel };

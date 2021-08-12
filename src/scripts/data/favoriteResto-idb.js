@@ -28,17 +28,17 @@ const FavoriteRestoIdb = {
   async deleteRestoo(id) {
     return (await dbPromise).delete(OBJECT_STORE_NAME, id);
   },
-  async searchRestos(query) {
-    return (await this.getAllRestos()).filter((restoo) => {
-      const loweredCaseRestoTitle = (restoo.title || '-').toLowerCase();
-      const jammedRestoTitle = loweredCaseRestoTitle.replace(/\s/g, '');
+  // async searchRestos(query) {
+  //   return (await this.getAllRestos()).filter((restoo) => {
+  //     const loweredCaseRestoTitle = (restoo.title || '-').toLowerCase();
+  //     const jammedRestoTitle = loweredCaseRestoTitle.replace(/\s/g, '');
 
-      const loweredCaseQuery = query.toLowerCase();
-      const jammedQuery = loweredCaseQuery.replace(/\s/g, '');
+  //     const loweredCaseQuery = query.toLowerCase();
+  //     const jammedQuery = loweredCaseQuery.replace(/\s/g, '');
 
-      return jammedRestoTitle.indexOf(jammedQuery) !== -1;
-    });
-  },
+  //     return jammedRestoTitle.indexOf(jammedQuery) !== -1;
+  //   });
+  // },
 };
 
 export default FavoriteRestoIdb;

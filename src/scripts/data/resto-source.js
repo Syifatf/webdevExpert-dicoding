@@ -18,11 +18,11 @@ class RestoSource {
     return response.json();
   }
 
-  static async search() {
-    const response = await fetch(API_ENDPOINT.SEARCH);
-    const responseJson = await response.json();
-    return responseJson.restaurants;
-  }
+  // static async search() {
+  //   const response = await fetch(API_ENDPOINT.SEARCH);
+  //   const responseJson = await response.json();
+  //   return responseJson.restaurants;
+  // }
 }
 
 export default RestoSource;
