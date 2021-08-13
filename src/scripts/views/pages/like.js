@@ -10,6 +10,10 @@ const Like = {
         <div id="restos" class="restos">
 
         </div>
+
+        <div class="container" id="empty-favorite-restaurant">
+          <h1>you have'n added a favorite restaurant yet</h1>
+        </div>
       </div>
     `;
   },
@@ -17,10 +21,19 @@ const Like = {
   async afterRender() {
     const restos = await FavoriteRestoIdb.getAllRestos();
     const restosContainer = document.querySelector('#restos');
-    restos.forEach((restoo) => {
-      restosContainer.innerHTML += createRestaurantItemTemplate(restoo);
-      console.log({ restos });
-    });
+    const restosEmptyContainer = document.querySelector(
+      '#empty-favorite-restaurant',
+    );
+    if (restos.length > 0) {
+      restosEmptyContainer.style.display = 'none';
+
+      restos.forEach((restoo) => {
+        restosContainer.innerHTML += createRestaurantItemTemplate(restoo);
+        console.log({ restos });
+      });
+    } else {
+      restosEmptyContainer.style.display = 'block';
+    }
   },
 };
 

@@ -6,11 +6,16 @@ const createRestaurantDetailTemplate = (restaurant) => `
   <h4 class="resto__title" href="#" >&#128609; ${restaurant.name} &#128609;</h4> <br/>
 
   <picture>
-      <source media="(max-width: 600px)">
-      <img loading="lazy" class="lazyload resto__poster" 
-            src="${CONFIG.BASE_IMAGE_URL + restaurant.pictureId}" 
-            alt="${restaurant.name}" />
+      <source class="lazyload" media="(max-width: 600px)" 
+              type="image/jpeg" 
+              data-srcset=${CONFIG.BASE_IMAGE_URL}small/${restaurant.pictureId} 
+              alt="${restaurant.name}" aria-hidden="true">
+      
+      <img loading="lazy" class="lazyload resto__poster"
+            data-src=${CONFIG.BASE_IMAGE_URL}medium/${restaurant.pictureId} 
+            alt="${restaurant.name}" aria-hidden="true"/>
   </picture>
+
   <div class="resto__info">
   <h3>Information Resto</h3> 
   <h4>Rating: ⭐️⭐️⭐️⭐️⭐️ ${restaurant.rating}</h4>
@@ -52,11 +57,15 @@ const createRestaurantDetailTemplate = (restaurant) => `
 
 const createRestaurantItemTemplate = (restaurant) => `
 <article class="post-item">
-<picture>
-  <source media="(max-width: 600px)">
+  <picture>
+    <source class="lazyload" media="(max-width: 600px)" 
+        type="image/jpeg" 
+        data-srcset=${CONFIG.BASE_IMAGE_URL}small/${restaurant.pictureId} 
+        alt="${restaurant.name}" aria-hidden="true">  
+    
   <img loading="lazy" class="lazyload post-item__thumbnail" 
-        src="${CONFIG.BASE_IMAGE_URL + restaurant.pictureId}"
-        alt=" "/>
+        data-src=${CONFIG.BASE_IMAGE_URL}medium/${restaurant.pictureId} 
+        alt="${restaurant.name}" aria-hidden="true"/>
 
 </picture>  
   <div class="post-item__content">

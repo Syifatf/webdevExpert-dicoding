@@ -1,4 +1,4 @@
-Feature('Liking Rests');
+Feature('Unliking Rests');
 
 Before(({ I }) => {
   I.amOnPage('/#/like');
@@ -20,4 +20,10 @@ Scenario('liking one resto', ({ I }) => {
   I.click('#likeButton');
   I.amOnPage('/#/like');
   I.seeElement('.post-item');
+  I.click('.post-item a');
+  I.seeElement('#likeButton');
+  I.click('#likeButton');
+
+  I.amOnPage('/#/like');
+  I.seeElement('#empty-favorite-restaurant');
 });
