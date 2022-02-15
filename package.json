@@ -1,4 +1,5 @@
 {
+  "homepage": "https://syifatf.github.io/webdevExpert-dicoding",
   "name": "restaurant-apps",
   "version": "1.0.0",
   "description": "",
@@ -8,7 +9,9 @@
     "build": "webpack --config webpack.prod.js",
     "test": "karma start",
     "e2e": "codeceptjs run --steps",
-    "build-image": "node sharp.js"
+    "build-image": "node sharp.js",
+    "predeploy": "npm run build",
+    "deploy":"gh-pages -d build"
   },
   "keywords": [],
   "author": "your_name <your.email@domain.com>",
